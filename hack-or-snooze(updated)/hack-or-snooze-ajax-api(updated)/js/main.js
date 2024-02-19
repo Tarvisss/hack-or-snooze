@@ -6,13 +6,23 @@ const $body = $("body");
 
 const $storiesLoadingMsg = $("#stories-loading-msg");
 const $allStoriesList = $("#all-stories-list");
+//added a container for stories, the users own stories and favorite stories
+const $favoritedStories = $("#favorited-stories");
+const $ownStories = $("#my-stories");
+const $storiesContainer = $("#stories-container")
 
 const $loginForm = $("#login-form");
 const $signupForm = $("#signup-form");
-
+//added submit form to mannipulate the dom
+const $submitForm = $("#submit-form");
+//added for a submit btn for stories
+const $navSubmitStory = $("#nav-submit-story");
 const $navLogin = $("#nav-login");
 const $navUserProfile = $("#nav-user-profile");
 const $navLogOut = $("#nav-logout");
+//added to store the user profile
+const $userProfile = $("#user-profile");
+
 
 /** To make it easier for individual components to show just themselves, this
  * is a useful function that hides pretty much everything on the page. After
@@ -20,10 +30,13 @@ const $navLogOut = $("#nav-logout");
  */
 
 function hidePageComponents() {
+  //added more components to the function 
   const components = [
     $allStoriesList,
     $loginForm,
     $signupForm,
+    $submitForm,
+    $userProfile
   ];
   components.forEach(c => c.hide());
 }
